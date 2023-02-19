@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: white;
+  color: black;
+  font-family: 'Marck Script', cursive;
+  font-weight: 300;
+  font-size: 20px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 50px);
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+ .presentation {
+  margin: 50px 0;
+  background: url('../public/img/bg.jpg') no-repeat;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  position: relative;
+}
+
+ .presentation::after {
+  content: "Лучшие пиццы в городе";
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 500; 
+  color: white;
+}
+
+ .presentation::before {
+  content: "попробуй вкус настоящей Италии";
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 300; 
+  color: white;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.mainAbout {
+  display: block;
+  margin-left: 20px;
+}
+
+.pagesPizzas {
+  width: 100%;
+}
+
+.menuPizzas {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .ourMenu {
+  font-size: 46px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+main .noProductCart {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+main .pizza {
+  width: 30%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+main .pizza-exit {
+  opacity: 1;
+  width: 30%;
+}
+
+main .pizza-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+  width: 0;
+  transition: width 500ms ease-in;
+}
+
+main .pizza .productInCart {
+  margin-left: 10px;
+  color: rgb(118, 228, 118);
+}
+
+main .pizza .imgPizza {
+  width: 100%;
+  transition: transform 500ms ease;
+}
+
+main .pizza .imgPizza:hover {
+  transform: scale(1.05);
+}
+
+main .addToCart {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: rgb(187, 187, 187);
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius:50%;
+  cursor: pointer;
+  font-weight: 100;
+  transition: transform 500ms ease;
+  opacity: 0.8;
+  font-size: 30px;
+  border:rgb(187, 187, 187);
+}
+
+main .addToCart:hover {
+  transform: scale(1.1);
+}
+
+main .deleteAllProducts {
+  font-size: 40px;
+  background-color: white;
+  border: white;
+  transition: transform 500ms ease;
+  margin-top: 5px;
+}
+
+main .deleteAllProducts:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+main .deleteFromCart {
+  font-size: 20px;
+  background-color: white;
+  border: white;
+  transition: transform 500ms ease;
+  margin-right: 5px;
+  float: right;
+}
+
+main .deleteFromCart:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.order {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media only all and (max-width: 1300px ) {
+  .wrapper {
+    width: 1180px;
+  }  
+}
+
+@media only all and (max-width: 1180px ) {
+  .wrapper {
+    width: 1000px;
+  }  
+}
+
+@media only all and (max-width: 1000px ) {
+  .wrapper {
+    width: 900px;
+  }  
+
+  main .pizza {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media only all and (max-width: 900px ) {
+  .wrapper {
+    width: 800px;
+  }  
+
+  main .pizza {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+}
+
+@media only all and (max-width: 800px ) {
+  .wrapper {
+    width: 700px;
+  }  
+
+  main .pizza {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+}
+
+@media only all and (max-width: 700px ) {
+  .wrapper {
+    width: 600px;
+  }  
+
+  main .pizza {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+}
+
+@media only all and (max-width: 600px ) {
+  .wrapper {
+    width: 500px;
+  }  
+
+  main .pizza {
+    width: 51%;
+    margin: auto;
+  }
+
+  main .pizza .addToCart {
+    position: static;
+    margin-left: 5px;
+  }
+
+}
+
+@media only all and (max-width: 500px ) {
+  .wrapper {
+    width: 400px;
+  }  
+}
+
+@media only all and (max-width: 400px ) {
+  .wrapper {
+    width: 300px;
+  }  
+  main .pizza h2{
+    font-size: 20px;
+  }
+
+  main .pizza b, main .pizza p{
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,35 @@
+.PageLink {
+    color: black;
+    margin-right: 10px;
+    float: right;
+    list-style: none;
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opasity 500ms ease;
+    text-decoration: none;
+}
+
+.PageLink .lengthCart{
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.PageLink:hover {
+    font-weight: bold;
+    opacity: 1;
+}
+
+.ActivePageLink {
+    font-weight: bold;
+    opacity: 1;
+}
+
+
+@media only all and (max-width: 400px ) {  
+    .PageLink {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}

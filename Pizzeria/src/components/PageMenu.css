@@ -1,0 +1,22 @@
+.PageLinkMenu {
+    color: black;
+    margin-right: 10px;
+    float: left;
+    list-style: none;
+    display: inline;
+    margin-right: 25px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opasity 500ms ease;
+    text-decoration: none;
+}
+
+.PageLinkMenu:hover {
+    font-weight: bold;
+    opacity: 1;
+}
+
+.ActivePageLinkMenu {
+    font-weight: bold;
+    opacity: 1;
+}
